@@ -1,14 +1,3 @@
-let rec fib n = match n with
-  | n when n > 1 -> fib (n-1) + fib (n-2)
-  | n2 -> n2;;
-
-(* Tail Recursive *)
-let fib2 n =
-  let rec fib2_helper k fk_1 fk : int =
-    if n = k then fk
-    else fib2_helper (k + 1) fk (fk_1 + fk)
-  in if n < 2 then n else fib2_helper 1 0 1
-;;
 
 (*List*)
 
@@ -80,4 +69,15 @@ let convert l = map (fun x -> if x > 0 then true else false) l;;
 
 
 
+(*Fibonacci naive solution*)
+let rec fib n = match n with
+  | n when n > 1 -> fib (n-1) + fib (n-2)
+  | n2 -> n2;;
 
+(* Tail Recursive *)
+let fib2 n =
+  let rec fib2_helper k fk_1 fk : int =
+    if n = k then fk
+    else fib2_helper (k + 1) fk (fk_1 + fk)
+  in if n < 2 then n else fib2_helper 1 0 1
+;;
