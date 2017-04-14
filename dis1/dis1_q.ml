@@ -1,4 +1,4 @@
-
+exception ImplementMe
 (*==================List======================*)
 (*delete certain element from list*)
 (*

@@ -76,7 +76,7 @@ let rec fib n = match n with
 
 (* Tail Recursive *)
 let fib2 n =
-  let rec fib2_helper k fk_1 fk : int =
+  let rec fib2_helper k fk_1 fk =
     if n = k then fk
     else fib2_helper (k + 1) fk (fk_1 + fk)
   in if n < 2 then n else fib2_helper 1 0 1
